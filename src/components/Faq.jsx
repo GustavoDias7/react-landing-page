@@ -1,19 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import AccordionList from "./AccordionList";
 
-class Faq extends Component {
-  render() {
-    return (
-      <section className="faq">
-        <div className="container">
-          <h2>Lorem ipsum dolor sit amet.</h2>
-          <div className="accordion-contianer">
-            <AccordionList />
-          </div>
+const Faq = () => {
+  return (
+    <section className="faq">
+      <div className="container">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <div className="accordion-contianer">
+          <AccordionList />
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
 export default Faq;
