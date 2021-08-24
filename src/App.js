@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -7,19 +7,20 @@ import Faq from './components/Faq';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
+import { GlobalStorage } from './components/GlobalContext';
 
 const App = () => {
   return (
-    <div className="App">
+    <GlobalStorage>
       <Header />
       <Hero />
       <About />
       <MoreAbout />
       <Faq />
-      <CallToAction  />
+      <CallToAction />
       <Footer />
       <Modal />
-    </div>
+    </GlobalStorage>
   );
 }
 

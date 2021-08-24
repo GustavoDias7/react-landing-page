@@ -1,24 +1,32 @@
-import React from "react";
+import React from 'react';
+import { GlobalContext } from './GlobalContext';
+import ModalButton from './ModalButton';
 
 const Modal = () => {
-  const modalDisplay = {
-    display: false ? 'block' : 'none'
+  const { modal, handleModal } = React.useContext(GlobalContext);
+
+  function clickOut({ target, currentTarget }) {
+    if (target === currentTarget) {
+      handleModal();
+    }
   }
 
   return (
-    <div className="modal" style={modalDisplay}>
-      <div className="container">
+    <div
+      className="modal"
+      style={{ display: modal ? 'block' : 'none' }}
+      onClick={clickOut}
+    >
+      <div>
         <div className="modal-content">
           <div>
             <h2>Modal</h2>
-            <button className="button">
-              close
-            </button>
+            <ModalButton innerText={'Close'} />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Modal;

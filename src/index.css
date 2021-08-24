@@ -343,13 +343,16 @@ footer a:hover {
   animation: modal-anima .4s ease-out;
 }
 
-.modal .container {
+.modal > div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 100%;
   max-width: 500px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 465px;
 }
 
 .modal-content {

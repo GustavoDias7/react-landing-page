@@ -1,5 +1,5 @@
 import React from "react";
-import BuyButton from "./BuyButton";
+import ModalButton from "./ModalButton";
 
 const Hero = () => {
   return (
@@ -11,7 +11,7 @@ const Hero = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
             exercitationem mollitia quasi deleniti, porro delectus.
           </p>
-          <BuyButton/>
+          <ModalButton />
         </div>
         <div className="side-right">
           <img src="./images/product-image.jpg" alt="Produto Principal" />
