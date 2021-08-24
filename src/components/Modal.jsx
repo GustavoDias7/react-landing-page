@@ -11,10 +11,10 @@ const Modal = () => {
     }
   }
 
+  if (!modal) return null;
   return (
     <div
       className="modal"
-      style={{ display: modal ? 'block' : 'none' }}
       onClick={clickOut}
     >
       <div>
